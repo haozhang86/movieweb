@@ -1,0 +1,20 @@
+name: Sync with upstream
+on:
+  push:
+    branches:
+      - main # 可以根据你的默认分支进行修改
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 添加合并更新的步骤
+      - name: Merge upstream changes
+        run: |
+          git remote add upstream https://github.com/movie-web/movie-web.git
+          git fetch upstream
+          git merge upstream/main -m "Merge upstream changes"
+          git push origin main
