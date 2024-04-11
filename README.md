@@ -31,8 +31,8 @@ Content is fetched from third parties and scraping is fully done on the client. 
 
 ## ⚠️ Limitations
 
-- Due to being a static site, there can be no SSR
-- To keep it cheap to host, amount of proxied requests need to be kept to a minimum
+- Due to being a static site, there can be no SSR.
+- To keep it cheap to host, amount of proxied requests need to be kept to a minimum.
 - Also to keep it cheap, no content must ever be streamed through the proxy. So only streams not protected by CORS headers.
 
 # 🧬 Running locally for development
